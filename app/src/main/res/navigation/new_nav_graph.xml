@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/new_nav_graph"
+    app:startDestination="@id/breakingNewFragement">
+
+    <fragment
+        android:id="@+id/breakingNewFragement"
+        android:name="com.example.newsapp.ui.Fragments.BreakingNewFragement"
+        android:label="fragment_breaking_new_fragement"
+        tools:layout="@layout/fragment_breaking_new_fragement" >
+        <action
+            android:id="@+id/action_breakingNewFragement_to_articalFragment"
+            app:destination="@id/articalFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+    </fragment>
+    <fragment
+        android:id="@+id/savenewFragment"
+        android:name="com.example.newsapp.ui.Fragments.SavenewFragment"
+        android:label="fragment_savenew"
+        tools:layout="@layout/fragment_savenew" >
+        <action
+            android:id="@+id/action_savenewFragment_to_articalFragment"
+            app:destination="@id/articalFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+    </fragment>
+    <fragment
+        android:id="@+id/articalFragment"
+        android:name="com.example.newsapp.ui.Fragments.ArticalFragment"
+        android:label="fragment_artical"
+        tools:layout="@layout/fragment_artical" >
+        <argument
+            android:name="article"
+            app:argType="com.example.newsapp.ui.Article" />
+    </fragment>
+    <fragment
+        android:id="@+id/searchnewFragment"
+        android:name="com.example.newsapp.ui.Fragments.SearchnewFragment"
+        android:label="fragment_searchnew"
+        tools:layout="@layout/fragment_searchnew" >
+        <action
+            android:id="@+id/action_searchnewFragment_to_articalFragment"
+            app:destination="@id/articalFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+    </fragment>
+</navigation>
